@@ -1,0 +1,36 @@
+body {
+	background-image: url('../images/2.png');
+
+}
+
+.main{
+
+	background-color: #c9c9c9;
+	margin-top: 200px;
+	
+}
+
+#title{
+	font-family: 'Flavors', cursive;
+	font-size:100px;
+	color:black;
+	text-align: center;
+	padding-top: 30px;
+
+}
+
+#subtitle{
+	font-family: 'Special Elite', cursive;
+	text-align: center;
+	font-size: 50px;
+	border-top: solid #2f2f2f 5px;
+	padding-top: 15px;
+}
+
+#start {
+	height: 150px;
+	font-size: 80px;
+	padding:20px 60px 20px 60px;
+	margin:70px 0 100px 35%;
+
+}

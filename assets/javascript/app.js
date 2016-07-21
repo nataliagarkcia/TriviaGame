@@ -1,28 +1,85 @@
-//when the web page loads this function will start//
-$(document).ready(function(){
 
-			// Theme Button
-			$("#start").on("click", function(){
-        		audioElement.play();
-			});
+var number = 60;
+		
+		$('#start').on('click', run);
+        $('#stop').on('click', stop);
+        
 
+        function run(){
+            counter = setInterval(decrement, 1000);
+        }
 
+        function decrement(){
+            number--;
+            $('#timer').html('<p>'+ 'Time Remaining:' + number + ' seconds'+'</p>');
+            if (number === 0){
+                stop();
+                alert('Time Up!')
+            }
+        }
 
-//question variables//
- 
-var question1= 'Which one is the main character of nightmare before christmas?';
-var optionAnswers1=['Jack Skeleton','Mickey Mouse','Nemo','Bart Simpson'];
+        function stop(){
+            clearInterval(counter);
+        }
 
-var question2='Who is Zero?';
-var optionAnswers2=["I don't know",'a mouse ','a number',"Jacks's Dog"];
+        run();
 
-var question3="Which one is Jack Skelligton's nickname?";
-var optionAnswer3=['the bubble','the pumpking king','mayor','oogie booggie']
+        $(document).ready(function() 
+{    $("#results").click(function() {                
 
-var question4="Who lives in Christmas Town";
-var optionAnswer4=['The Easter Bunny','Santa Claus','Thomas The Train','Dr.Flinkestein']
+if (!$("input[@name=q1]:checked").val() ||            
+!$("input[@name=q2]:checked").val() ||            
+!$("input[@name=q3]:checked").val() ||            
+!$("input[@name=q4]:checked").val() ||            
+!$("input[@name=q5]:checked").val()             
 
-var question5='What is Oogie Boogie filled with?';
-var optionAnswer5=['bugs','candies','love','trash'];
+alert("You're not done yet!");        
+}        
 
+else {            
+var cat1name = "1";            
+var cat2name = "2";            
+var cat3name = "3";            
+var cat4name = "4";            
+var cat5name = "5";            
+var cat6name = "None";            
+            
 
+var cat1 = ($("input[@name=q1]:checked").val() != "a"); 
+           
+var cat2 = ($("input[@name=q2]:checked").val() != "b");  
+
+var cat3 = ($("input[@name=q3]:checked").val() != "c");  
+
+var cat4 = ($("input[@name=q4]:checked").val() != "d");  
+
+var cat5 = ($("input[@name=q5]:checked").val() != "a");  
+
+var cat6 = (!cat1 && !cat2 && !cat3 && !cat4 && !cat5 && ); var categories = [];                        
+
+if (cat1) { categories.push(cat1name) };            
+if (cat2) { categories.push(cat2name) };            
+if (cat3) { categories.push(cat3name) };            
+if (cat4) { categories.push(cat4name) };            
+if (cat5) { categories.push(cat5name) };            
+if (cat6) { categories.push(cat6name) };            
+                      
+
+var catStr = 'You answered the following questions incorrectly: ' + categories.join(', ') + '';                     
+$("#categorylist").text(catStr);                        
+$("#categorylist").show("slow");            
+
+if (cat1) { $("#category1").show("slow"); };            
+if (cat2) { $("#category2").show("slow"); };            
+if (cat3) { $("#category3").show("slow"); };            
+if (cat4) { $("#category4").show("slow"); };            
+if (cat5) { $("#category5").show("slow"); };            
+if (cat6) { $("#category6").show("slow"); };            
+if (cat7) { $("#category7").show("slow"); };            
+if (cat8) { $("#category8").show("slow"); };            
+if (cat9) { $("#category9").show("slow"); };            
+if (cat10) { $("#category10").show("slow"); };            
+if (cat11) { $("#category11").show("slow"); };
+{ $("#closing").show("slow"); };
+}
+    });});

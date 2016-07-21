@@ -1,4 +1,4 @@
-
+//set up the timer
 var number = 60;
 		
 		$('#start').on('click', run);

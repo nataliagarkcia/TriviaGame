@@ -1,31 +1,36 @@
 //set up the timer
 var number = 60;
-		
-		$('#start').on('click', run);
-        $('#stop').on('click', stop);
-        
 
-        function run(){
+
+
+	$(document).ready(function() {	
+		$('#start').click(function(run){
+
             counter = setInterval(decrement, 1000);
-        }
+
+            $("#timer").html(number);
+
+
+        });
+            });
+
 
         function decrement(){
             number--;
             $('#timer').html('<p>'+ 'Time Remaining:' + number + ' seconds'+'</p>');
             if (number === 0){
-                stop();
-                alert('Time Up!')
+                alert('Time Up!');
+                
             }
-        }
+        };
 
-        function stop(){
-            clearInterval(counter);
-        }
+        
 
-        run();
 
-        $(document).ready(function() 
-{    $("#results").click(function() {                
+
+
+  
+$("#results").click(function() {                
 
 if (!$("input[@name=q1]:checked").val() ||            
 !$("input[@name=q2]:checked").val() ||            
@@ -83,3 +88,5 @@ if (cat11) { $("#category11").show("slow"); };
 { $("#closing").show("slow"); };
 }
     });});
+
+function*/
